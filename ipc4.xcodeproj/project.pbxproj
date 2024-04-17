@@ -13,6 +13,9 @@
 		293541E02BC91EE70067FE03 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 293541DF2BC91EE70067FE03 /* Base */; };
 		293541E22BC91EE80067FE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293541E12BC91EE80067FE03 /* Assets.xcassets */; };
 		293541E52BC91EE80067FE03 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 293541E42BC91EE80067FE03 /* Base */; };
+		293541EE2BC91F090067FE03 /* HaishinKit in Frameworks */ = {isa = PBXBuildFile; productRef = 293541ED2BC91F090067FE03 /* HaishinKit */; };
+		293541F02BC91F090067FE03 /* SRTHaishinKit in Frameworks */ = {isa = PBXBuildFile; productRef = 293541EF2BC91F090067FE03 /* SRTHaishinKit */; };
+		293541F22BCA5C720067FE03 /* NetworkConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293541F12BCA5C720067FE03 /* NetworkConnectivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,7 @@
 		293541E12BC91EE80067FE03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		293541E42BC91EE80067FE03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		293541E62BC91EE80067FE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		293541F12BCA5C720067FE03 /* NetworkConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				293541F02BC91F090067FE03 /* SRTHaishinKit in Frameworks */,
+				293541EE2BC91F090067FE03 /* HaishinKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 				293541E12BC91EE80067FE03 /* Assets.xcassets */,
 				293541E32BC91EE80067FE03 /* LaunchScreen.storyboard */,
 				293541E62BC91EE80067FE03 /* Info.plist */,
+				293541F12BCA5C720067FE03 /* NetworkConnectivity.swift */,
 			);
 			path = ipc4;
 			sourceTree = "<group>";
@@ -83,6 +90,10 @@
 			dependencies = (
 			);
 			name = ipc4;
+			packageProductDependencies = (
+				293541ED2BC91F090067FE03 /* HaishinKit */,
+				293541EF2BC91F090067FE03 /* SRTHaishinKit */,
+			);
 			productName = ipc4;
 			productReference = 293541D52BC91EE70067FE03 /* ipc4.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 293541CC2BC91EE70067FE03;
+			packageReferences = (
+				293541EC2BC91F090067FE03 /* XCRemoteSwiftPackageReference "HaishinKit" */,
+			);
 			productRefGroup = 293541D62BC91EE70067FE03 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				293541DD2BC91EE70067FE03 /* ViewController.swift in Sources */,
+				293541F22BCA5C720067FE03 /* NetworkConnectivity.swift in Sources */,
 				293541D92BC91EE70067FE03 /* AppDelegate.swift in Sources */,
 				293541DB2BC91EE70067FE03 /* SceneDelegate.swift in Sources */,
 			);
@@ -363,6 +378,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		293541EC2BC91F090067FE03 /* XCRemoteSwiftPackageReference "HaishinKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shogo4405/HaishinKit.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		293541ED2BC91F090067FE03 /* HaishinKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 293541EC2BC91F090067FE03 /* XCRemoteSwiftPackageReference "HaishinKit" */;
+			productName = HaishinKit;
+		};
+		293541EF2BC91F090067FE03 /* SRTHaishinKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 293541EC2BC91F090067FE03 /* XCRemoteSwiftPackageReference "HaishinKit" */;
+			productName = SRTHaishinKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 293541CD2BC91EE70067FE03 /* Project object */;
 }
